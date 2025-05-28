@@ -15,15 +15,15 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
         }
         
         .container {
             max-width: 900px;
             margin: 0 auto;
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
             overflow: hidden;
         }
@@ -36,12 +36,15 @@
         }
         
         .menu-item {
-            padding: 20px 30px;
+            padding: 15px 20px;
             color: white;
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: 600;
             border-bottom: 3px solid transparent;
+            font-size: 0.9rem;
+            flex: 1;
+            text-align: center;
         }
         
         .menu-item:hover {
@@ -54,7 +57,7 @@
         }
         
         .page-content {
-            padding: 40px;
+            padding: 20px;
             display: none;
         }
         
@@ -64,23 +67,24 @@
         
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         
         .header h1 {
             color: #2d3748;
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 10px;
             background: linear-gradient(135deg, #667eea, #764ba2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1.3;
         }
         
         .header p {
             color: #718096;
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 20px;
         }
         
@@ -90,7 +94,7 @@
             background: #e2e8f0;
             border-radius: 20px;
             overflow: hidden;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         
         .progress-fill {
@@ -106,13 +110,14 @@
             margin-top: 10px;
             color: #4a5568;
             font-weight: 600;
+            font-size: 0.9rem;
         }
         
         .checklist-item {
             background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             border: 2px solid transparent;
             transition: all 0.3s ease;
@@ -139,30 +144,47 @@
         
         .checklist-content {
             display: flex;
-            align-items: flex-start;
-            gap: 20px;
+            flex-direction: column;
+            gap: 15px;
             margin-bottom: 15px;
+        }
+        
+        .question-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
         }
         
         .question-number {
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .checklist-text {
+            flex: 1;
+            color: #2d3748;
+            font-size: 1rem;
+            line-height: 1.5;
+            word-break: keep-all;
+            word-wrap: break-word;
         }
         
         .checkbox-container {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             align-items: center;
-            margin-top: 5px;
+            justify-content: center;
+            margin-top: 10px;
         }
         
         .custom-checkbox {
@@ -206,16 +228,6 @@
             content: '✗';
         }
         
-        .checklist-text {
-            flex: 1;
-            color: #2d3748;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-top: 3px;
-            word-break: keep-all;
-            word-wrap: break-word;
-        }
-        
         .checkbox-label {
             color: #4a5568;
             font-weight: 600;
@@ -230,7 +242,7 @@
             padding: 8px 16px;
             border-radius: 20px;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
             transition: all 0.2s ease;
             display: inline-block;
@@ -258,8 +270,8 @@
         
         .explanation-text {
             color: #1e3a8a;
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 0.9rem;
+            line-height: 1.5;
             font-weight: 500;
         }
         
@@ -273,8 +285,8 @@
         }
         
         .result-section {
-            margin-top: 40px;
-            padding: 30px;
+            margin-top: 30px;
+            padding: 25px;
             background: linear-gradient(135deg, #f7fafc, #edf2f7);
             border-radius: 15px;
             text-align: center;
@@ -283,13 +295,13 @@
         
         .result-title {
             color: #2d3748;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 15px;
         }
         
         .result-score {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 10px;
             background: linear-gradient(135deg, #667eea, #764ba2);
@@ -300,12 +312,12 @@
         
         .result-message {
             color: #4a5568;
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.6;
         }
         
         .category-section {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         .category-header {
@@ -316,7 +328,7 @@
         
         .category-title {
             color: #2d3748;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -324,13 +336,13 @@
         }
         
         .category-icon {
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
         
         .icon-prompt {
@@ -345,17 +357,17 @@
         
         .how-to-content {
             color: #4a5568;
-            padding: 40px;
+            padding: 20px;
         }
         
         .howto-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         
         .howto-header h1 {
             color: #2d3748;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 15px;
             background: linear-gradient(135deg, #667eea, #764ba2);
@@ -366,20 +378,20 @@
         }
         
         .howto-subtitle {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #718096;
             margin-bottom: 30px;
         }
         
         .steps-container {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         
         .step-card {
             background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 25px;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             border: 2px solid #f7fafc;
             transition: all 0.3s ease;
@@ -400,19 +412,20 @@
         .step-number {
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            flex-shrink: 0;
         }
         
         .step-header h3 {
             color: #2d3748;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 700;
             margin: 0;
         }
@@ -421,85 +434,118 @@
             background: linear-gradient(135deg, #f0f9ff, #dbeafe);
             border: 1px solid #3b82f6;
             border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
+            padding: 12px;
+            margin-bottom: 15px;
             color: #1e40af;
             font-weight: 600;
+            font-size: 0.9rem;
         }
         
         .claude-conversation {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 25px;
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding: 15px;
             background: #f8fafc;
-            border-radius: 12px;
+            border-radius: 10px;
             border: 1px solid #e2e8f0;
         }
         
-        .conversation-left {
-            padding-right: 10px;
+        .conversation-left,
+        .conversation-right {
+            width: 100%;
         }
         
         .conversation-right {
-            padding-left: 10px;
-            border-left: 2px solid #e2e8f0;
+            border-top: 2px solid #e2e8f0;
+            padding-top: 12px;
         }
         
-        .user-message {
+        .user-message,
+        .artifact-preview {
             background: white;
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 15px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
         
-        .message-header {
+        .artifact-preview {
+            border: 2px solid #10b981;
+        }
+        
+        .message-header,
+        .artifact-header {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-            color: #4a5568;
+            gap: 8px;
+            margin-bottom: 12px;
             font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .message-header {
+            color: #4a5568;
+        }
+        
+        .artifact-header {
+            color: #059669;
+            font-weight: 700;
         }
         
         .claude-avatar {
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
             background: #f97316;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+        
+        .artifact-icon {
             font-size: 1rem;
+        }
+        
+        .message-content,
+        .artifact-content {
+            color: #2d3748;
+            line-height: 1.5;
+            font-size: 0.85rem;
+        }
+        
+        .artifact-content {
+            color: #374151;
         }
         
         .download-guide {
             background: white;
             border: 2px solid #10b981;
-            border-radius: 12px;
-            padding: 25px;
-            margin-top: 20px;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
         }
         
         .download-guide h4 {
             color: #059669;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
+            font-size: 1rem;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
         
         .download-guide ol {
             color: #374151;
-            line-height: 1.8;
-            font-size: 1rem;
-            padding-left: 20px;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            padding-left: 18px;
         }
         
         .download-guide li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         
         .download-guide strong {
@@ -507,125 +553,97 @@
             font-weight: 700;
         }
         
-        .message-content {
-            color: #2d3748;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-        
-        .artifact-preview {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border: 2px solid #10b981;
-        }
-        
-        .artifact-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-            color: #059669;
-            font-weight: 700;
-        }
-        
-        .artifact-icon {
-            font-size: 1.2rem;
-        }
-        
-        .artifact-content {
-            color: #374151;
-            line-height: 1.8;
-            font-size: 0.9rem;
-        }
-        
         .realtime-note {
             background: linear-gradient(135deg, #fef3c7, #fde68a);
             border: 2px solid #f59e0b;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
             color: #92400e;
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 0.85rem;
+            line-height: 1.5;
         }
         
-        .tips-section {
-            margin-bottom: 40px;
+        .tips-section,
+        .prompt-tips-section,
+        .claude-features-section {
+            margin-bottom: 30px;
         }
         
-        .tips-section h2 {
+        .tips-section h2,
+        .prompt-tips-section h2,
+        .claude-features-section h2 {
             color: #2d3748;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-align: center;
         }
         
-        .tips-grid {
+        .tips-grid,
+        .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
         
-        .tip-card {
+        .tip-card,
+        .feature-item {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
+            padding: 20px;
+            border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             text-align: center;
             transition: transform 0.3s ease;
         }
         
-        .tip-card:hover {
-            transform: translateY(-5px);
+        .tip-card:hover,
+        .feature-item:hover {
+            transform: translateY(-3px);
         }
         
-        .tip-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
         
-        .tip-card h4 {
-            color: #2d3748;
-            font-size: 1.2rem;
-            font-weight: 700;
+        .tip-icon,
+        .feature-icon {
+            font-size: 2rem;
             margin-bottom: 10px;
         }
         
-        .tip-card p {
-            color: #718096;
-            line-height: 1.5;
-            font-size: 0.95rem;
-        }
-        
-        .prompt-tips-section {
-            margin-bottom: 40px;
-        }
-        
-        .prompt-tips-section h2 {
+        .tip-card h4,
+        .feature-text strong {
             color: #2d3748;
-            font-size: 1.8rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            margin-bottom: 25px;
-            text-align: center;
+            margin-bottom: 8px;
+        }
+        
+        .tip-card p,
+        .feature-text {
+            color: #718096;
+            line-height: 1.4;
+            font-size: 0.9rem;
         }
         
         .prompt-tips {
             background: white;
-            border-radius: 15px;
-            padding: 30px;
+            border-radius: 12px;
+            padding: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
         
         .prompt-tip {
             display: flex;
             align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 10px;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 8px;
             transition: background 0.2s ease;
         }
         
@@ -635,377 +653,159 @@
         
         .tip-bullet {
             color: #48bb78;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 700;
             flex-shrink: 0;
         }
         
         .tip-content {
             color: #4a5568;
-            line-height: 1.6;
+            line-height: 1.5;
+            font-size: 0.9rem;
         }
         
         .tip-content strong {
             color: #2d3748;
         }
         
-        .claude-features-section {
-            margin-bottom: 40px;
-        }
-        
-        .claude-features-section h2 {
-            color: #2d3748;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-item:hover {
-            transform: translateY(-3px);
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-        
-        .feature-text {
-            color: #4a5568;
-            line-height: 1.5;
-        }
-        
-        .feature-text strong {
-            color: #2d3748;
-            font-size: 1.1rem;
-        }
-        
         .final-tip {
             background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 20px;
-            padding: 40px;
+            border-radius: 15px;
+            padding: 25px;
             text-align: center;
             color: white;
         }
         
         .final-tip-content h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
             font-weight: 700;
         }
         
         .final-tip-content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.5;
             opacity: 0.95;
         }
         
-        @media (max-width: 768px) {
+        /* Desktop 스타일 (768px 이상) */
+        @media (min-width: 768px) {
             body {
-                padding: 10px;
-            }
-            
-            .container {
-                margin: 0;
-                border-radius: 15px;
-                min-height: calc(100vh - 20px);
-            }
-            
-            .page-content {
                 padding: 20px;
             }
             
+            .container {
+                border-radius: 20px;
+            }
+            
+            .page-content {
+                padding: 40px;
+            }
+            
             .header h1 {
-                font-size: 1.8rem;
-                line-height: 1.2;
+                font-size: 2.5rem;
             }
             
             .header p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
             
             .checklist-item {
-                padding: 20px 15px;
-                margin-bottom: 15px;
+                padding: 25px;
             }
             
             .checklist-content {
-                flex-direction: column;
-                gap: 15px;
+                flex-direction: row;
+                align-items: flex-start;
             }
             
-            .question-number {
-                width: 25px;
-                height: 25px;
-                font-size: 0.8rem;
-                align-self: flex-start;
-            }
-            
-            .checklist-text {
-                font-size: 1rem;
-                line-height: 1.5;
-                order: 2;
+            .question-header {
+                flex: 1;
             }
             
             .checkbox-container {
                 justify-content: flex-start;
-                order: 3;
-                gap: 20px;
-            }
-            
-            .explanation-toggle {
-                padding: 6px 12px;
-                font-size: 0.85rem;
-                margin-top: 5px;
-            }
-            
-            .explanation-content {
-                padding: 12px;
-                margin-top: 10px;
-            }
-            
-            .explanation-text {
-                font-size: 0.9rem;
-                line-height: 1.5;
+                margin-top: 0;
+                gap: 15px;
             }
             
             .menu-item {
-                padding: 12px 15px;
-                font-size: 0.85rem;
-            }
-            
-            .category-header {
-                margin-bottom: 15px;
-            }
-            
-            .category-title {
-                font-size: 1.2rem;
-            }
-            
-            .category-icon {
-                width: 25px;
-                height: 25px;
+                padding: 20px 30px;
                 font-size: 1rem;
             }
             
-            .result-section {
-                padding: 20px;
-                margin-top: 30px;
-            }
-            
-            .result-title {
-                font-size: 1.3rem;
-            }
-            
-            .result-score {
-                font-size: 2.5rem;
-            }
-            
-            .result-message {
-                font-size: 1rem;
-            }
-            
-            /* HOW TO MAKE 페이지 모바일 최적화 */
             .howto-header h1 {
-                font-size: 1.6rem;
-                line-height: 1.3;
-                margin-bottom: 10px;
+                font-size: 2.2rem;
             }
             
             .howto-subtitle {
-                font-size: 1rem;
-                margin-bottom: 20px;
-            }
-            
-            .step-card {
-                padding: 20px 15px;
-                margin-bottom: 20px;
-            }
-            
-            .step-header {
-                flex-direction: row;
-                text-align: left;
-                gap: 15px;
-                margin-bottom: 15px;
-            }
-            
-            .step-number {
-                width: 35px;
-                height: 35px;
-                font-size: 1.1rem;
-                flex-shrink: 0;
-            }
-            
-            .step-header h3 {
                 font-size: 1.2rem;
-                margin: 0;
-            }
-            
-            .step-highlight {
-                padding: 12px;
-                margin-bottom: 15px;
-                font-size: 0.9rem;
-            }
-            
-            .claude-conversation {
-                grid-template-columns: 1fr;
-                gap: 15px;
-                padding: 15px;
-                margin-bottom: 20px;
-            }
-            
-            .conversation-right {
-                border-left: none;
-                border-top: 2px solid #e2e8f0;
-                padding-left: 0;
-                padding-top: 15px;
-            }
-            
-            .user-message, .artifact-preview {
-                padding: 15px;
-            }
-            
-            .message-header, .artifact-header {
-                margin-bottom: 10px;
-            }
-            
-            .claude-avatar {
-                width: 25px;
-                height: 25px;
-                font-size: 0.9rem;
-            }
-            
-            .message-header span, .artifact-header span {
-                font-size: 0.9rem;
-            }
-            
-            .message-content, .artifact-content {
-                font-size: 0.85rem;
-                line-height: 1.5;
-            }
-            
-            .realtime-note {
-                padding: 15px;
-                font-size: 0.85rem;
-                margin-top: 15px;
-            }
-            
-            .download-guide {
-                padding: 20px 15px;
-                margin-top: 15px;
-            }
-            
-            .download-guide h4 {
-                font-size: 1.1rem;
-                margin-bottom: 12px;
-            }
-            
-            .download-guide ol {
-                font-size: 0.9rem;
-                line-height: 1.6;
-                padding-left: 15px;
-            }
-            
-            .download-guide li {
-                margin-bottom: 6px;
-            }
-            
-            .tips-section h2, .prompt-tips-section h2, .claude-features-section h2 {
-                font-size: 1.4rem;
-                margin-bottom: 20px;
             }
             
             .tips-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .tip-card {
-                padding: 20px 15px;
-            }
-            
-            .tip-icon {
-                font-size: 2rem;
-                margin-bottom: 10px;
-            }
-            
-            .tip-card h4 {
-                font-size: 1.1rem;
-                margin-bottom: 8px;
-            }
-            
-            .tip-card p {
-                font-size: 0.9rem;
-            }
-            
-            .prompt-tips {
-                padding: 20px 15px;
-            }
-            
-            .prompt-tip {
-                padding: 12px;
-                margin-bottom: 15px;
-            }
-            
-            .tip-content {
-                font-size: 0.9rem;
-                line-height: 1.5;
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .feature-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .feature-item {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
-                padding: 20px 15px;
+                flex-direction: row;
+                text-align: left;
+                gap: 20px;
             }
             
-            .feature-icon {
-                font-size: 1.8rem;
+            .claude-conversation {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                padding: 20px;
             }
             
-            .feature-text {
-                font-size: 0.9rem;
-                line-height: 1.4;
+            .conversation-right {
+                border-top: none;
+                border-left: 2px solid #e2e8f0;
+                padding-top: 0;
+                padding-left: 20px;
             }
             
-            .feature-text strong {
-                font-size: 1rem;
+            .how-to-content {
+                padding: 40px;
+            }
+            
+            .step-card {
+                padding: 30px;
+            }
+            
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .step-header h3 {
+                font-size: 1.4rem;
             }
             
             .final-tip {
-                padding: 25px 20px;
+                padding: 40px;
             }
             
             .final-tip-content h3 {
-                font-size: 1.4rem;
-                margin-bottom: 12px;
+                font-size: 1.6rem;
             }
             
             .final-tip-content p {
-                font-size: 1rem;
-                line-height: 1.5;
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* 큰 화면 (1024px 이상) */
+        @media (min-width: 1024px) {
+            .tips-grid,
+            .feature-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
         }
     </style>
@@ -1037,9 +837,11 @@
                 
                 <div class="checklist-item" data-question="1">
                     <div class="checklist-content">
-                        <div class="question-number">1</div>
-                        <div class="checklist-text">
-                            AI에게 "너는 홍보 전문가야. 사내직원 타겟으로 SNS 홍보게시글을 3개 만들어줘" 처럼 <strong>역할과 구체적인 조건을 명시</strong>해서 요청한다.
+                        <div class="question-header">
+                            <div class="question-number">1</div>
+                            <div class="checklist-text">
+                                AI에게 "너는 홍보 전문가야. 사내직원 타겟으로 SNS 홍보게시글을 3개 만들어줘" 처럼 <strong>역할과 구체적인 조건을 명시</strong>해서 요청한다.
+                            </div>
                         </div>
                         <div class="checkbox-container">
                             <div class="checkbox-label">Yes</div>
@@ -1054,62 +856,15 @@
                             <strong>설명 :</strong> 역할을 부여하고 구체적인 조건을 제시하면 AI가 맥락을 이해하고 더 정확한 답변을 제공할 수 있습니다
                         </div>
                     </div>
-                    
-                    <div class="step-card">
-                        <div class="step-header">
-                            <div class="step-number">4</div>
-                            <h3>HTML 파일로 저장하기</h3>
-                        </div>
-                        <div class="step-highlight">
-                            <strong>💾 목표:</strong> 완성된 웹페이지를 로컬 파일로 저장
-                        </div>
-                        <div class="claude-conversation">
-                            <div class="conversation-left">
-                                <div class="user-message">
-                                    <div class="message-header">
-                                        <div class="claude-avatar">🔶</div>
-                                        <span>Claude 프롬프트</span>
-                                    </div>
-                                    <div class="message-content">
-                                        완성된 웹페이지를 HTML 파일로 다운로드할 수 있게 해줘!
-                                        <br><br>
-                                        아티팩트 우측 상단의 다운로드 버튼을 클릭하면 바로 HTML 파일을 받을 수 있어요.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="conversation-right">
-                                <div class="artifact-preview">
-                                    <div class="artifact-header">
-                                        <div class="artifact-icon">💾</div>
-                                        <span>HTML 파일 다운로드 완료</span>
-                                    </div>
-                                    <div class="artifact-content">
-                                        ✅ 완전한 HTML 파일 생성<br>
-                                        ✅ CSS, JavaScript 모두 포함<br>
-                                        ✅ 즉시 실행 가능한 웹페이지<br>
-                                        ✅ 어디서든 공유 가능
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="download-guide">
-                            <h4>📥 다운로드 방법</h4>
-                            <ol>
-                                <li>아티팩트 우측 상단의 <strong>다운로드 버튼 (⬇)</strong> 클릭</li>
-                                <li><strong>"HTML 파일로 다운로드"</strong> 선택</li>
-                                <li>원하는 위치에 파일 저장</li>
-                                <li>저장된 HTML 파일을 브라우저에서 열기</li>
-                                <li>🎉 완성! 언제든지 사용 가능</li>
-                            </ol>
-                        </div>
-                    </div>
                 </div>
-                
+                    
                 <div class="checklist-item" data-question="2">
                     <div class="checklist-content">
-                        <div class="question-number">2</div>
-                        <div class="checklist-text">
-                            "표로 정리해줘" 대신 <strong>"| 제목 | 장점 | 단점 |" 형식</strong>처럼 원하는 표 모양, 머릿글을 구체적으로 요청할 수 있다.
+                        <div class="question-header">
+                            <div class="question-number">2</div>
+                            <div class="checklist-text">
+                                "표로 정리해줘" 대신 <strong>"| 제목 | 장점 | 단점 |" 형식</strong>처럼 원하는 표 모양, 머릿글을 구체적으로 요청할 수 있다.
+                            </div>
                         </div>
                         <div class="checkbox-container">
                             <div class="checkbox-label">Yes</div>
@@ -1128,9 +883,11 @@
                 
                 <div class="checklist-item" data-question="3">
                     <div class="checklist-content">
-                        <div class="question-number">3</div>
-                        <div class="checklist-text">
-                            "~하지마", "~안되게 해줘" 같은 부정 표현보다는 <strong>"이렇게 해줘"로 긍정 명령문</strong>으로 요청한다.
+                        <div class="question-header">
+                            <div class="question-number">3</div>
+                            <div class="checklist-text">
+                                "~하지마", "~안되게 해줘" 같은 부정 표현보다는 <strong>"이렇게 해줘"로 긍정 명령문</strong>으로 요청한다.
+                            </div>
                         </div>
                         <div class="checkbox-container">
                             <div class="checkbox-label">Yes</div>
@@ -1149,9 +906,11 @@
                 
                 <div class="checklist-item" data-question="4">
                     <div class="checklist-content">
-                        <div class="question-number">4</div>
-                        <div class="checklist-text">
-                            "혹시", "가능하다면" 같은 쿠션어 없이 <strong>"○○를 해줘"로 직접적</strong>으로 요청한다.
+                        <div class="question-header">
+                            <div class="question-number">4</div>
+                            <div class="checklist-text">
+                                "혹시", "가능하다면" 같은 쿠션어 없이 <strong>"○○를 해줘"로 직접적</strong>으로 요청한다.
+                            </div>
                         </div>
                         <div class="checkbox-container">
                             <div class="checkbox-label">Yes</div>
@@ -1170,9 +929,11 @@
                 
                 <div class="checklist-item" data-question="5">
                     <div class="checklist-content">
-                        <div class="question-number">5</div>
-                        <div class="checklist-text">
-                            복잡한 작업은 <strong>"1단계, 2단계" 처럼 작게 나누어서 단계별</strong>로 지시한다.
+                        <div class="question-header">
+                            <div class="question-number">5</div>
+                            <div class="checklist-text">
+                                복잡한 작업은 <strong>"1단계, 2단계" 처럼 작게 나누어서 단계별</strong>로 지시한다.
+                            </div>
                         </div>
                         <div class="checkbox-container">
                             <div class="checkbox-label">Yes</div>
@@ -1191,9 +952,11 @@
                 
                 <div class="checklist-item" data-question="6">
                     <div class="checklist-content">
-                        <div class="question-number">6</div>
-                        <div class="checklist-text">
-                            원하는 결과물이 있을 때는 "이런 느낌으로 해줘"라며 <strong>2-3개 예시를 함께 제공</strong>한다.
+                        <div class="question-header">
+                            <div class="question-number">6</div>
+                            <div class="checklist-text">
+                                원하는 결과물이 있을 때는 "이런 느낌으로 해줘"라며 <strong>2-3개 예시를 함께 제공</strong>한다.
+                            </div>
                         </div>
                         <div class="checkbox-container">
                             <div class="checkbox-label">Yes</div>
@@ -1221,9 +984,11 @@
                 
                 <div class="checklist-item" data-question="7">
                     <div class="checklist-content">
-                        <div class="question-number">7</div>
-                        <div class="checklist-text">
-                            AI가 그럴듯하지만 틀린 정보를 줄 수 있다는 걸 알고, <strong>중요한 내용은 반드시 다른 곳에서도 확인</strong>한다.
+                        <div class="question-header">
+                            <div class="question-number">7</div>
+                            <div class="checklist-text">
+                                AI가 그럴듯하지만 틀린 정보를 줄 수 있다는 걸 알고, <strong>중요한 내용은 반드시 다른 곳에서도 확인</strong>한다.
+                            </div>
                         </div>
                         <div class="checkbox-container">
                             <div class="checkbox-label">Yes</div>
@@ -1242,9 +1007,11 @@
                 
                 <div class="checklist-item" data-question="8">
                     <div class="checklist-content">
-                        <div class="question-number">8</div>
-                        <div class="checklist-text">
-                            AI는 기존 정보를 조합해서 답변하는 거라 <strong>완전히 새로운 아이디어 창조는 어렵다</strong>는 걸 안다.
+                        <div class="question-header">
+                            <div class="question-number">8</div>
+                            <div class="checklist-text">
+                                AI는 기존 정보를 조합해서 답변하는 거라 <strong>완전히 새로운 아이디어 창조는 어렵다</strong>는 걸 안다.
+                            </div>
                         </div>
                         <div class="checkbox-container">
                             <div class="checkbox-label">Yes</div>
@@ -1263,9 +1030,11 @@
                 
                 <div class="checklist-item" data-question="9">
                     <div class="checklist-content">
-                        <div class="question-number">9</div>
-                        <div class="checklist-text">
-                            <strong>토큰 제한</strong>이 있어서 너무 긴 문서나 대화는 한 번에 처리하기 어렵다는 걸 이해한다.
+                        <div class="question-header">
+                            <div class="question-number">9</div>
+                            <div class="checklist-text">
+                                <strong>토큰 제한</strong>이 있어서 너무 긴 문서나 대화는 한 번에 처리하기 어렵다는 걸 이해한다.
+                            </div>
                         </div>
                         <div class="checkbox-container">
                             <div class="checkbox-label">Yes</div>
@@ -1284,9 +1053,11 @@
                 
                 <div class="checklist-item" data-question="10">
                     <div class="checklist-content">
-                        <div class="question-number">10</div>
-                        <div class="checklist-text">
-                            AI가 아무리 좋은 답변을 줘도 <strong>고맙다는 답변은 하지 않는다</strong>
+                        <div class="question-header">
+                            <div class="question-number">10</div>
+                            <div class="checklist-text">
+                                AI가 아무리 좋은 답변을 줘도 <strong>고맙다는 답변은 하지 않는다</strong>
+                            </div>
                         </div>
                         <div class="checkbox-container">
                             <div class="checkbox-label">Yes</div>
@@ -1305,9 +1076,11 @@
                 
                 <div class="checklist-item" data-question="11">
                     <div class="checklist-content">
-                        <div class="question-number">11</div>
-                        <div class="checklist-text">
-                            <strong>이런 웹페이지를 5분만에 만드는 방법</strong>을 안다
+                        <div class="question-header">
+                            <div class="question-number">11</div>
+                            <div class="checklist-text">
+                                <strong>이런 웹페이지를 5분만에 만드는 방법</strong>을 안다
+                            </div>
                         </div>
                         <div class="checkbox-container">
                             <div class="checkbox-label">Yes</div>
@@ -1335,8 +1108,8 @@
         <div class="page-content" id="howto-page">
             <div class="how-to-content">
                 <div class="howto-header">
-                    <h1>🚀 Claude로 AI 프롬프팅 셀프 테스트 웹페이지 만드는 방법</h1>
-                    <p class="howto-subtitle">실제 제작 과정을 단계별로 공개합니다!</p>
+                    <h1>🚀 Claude로 웹페이지 만드는 방법</h1>
+                    <p class="howto-subtitle">실제 제작 과정을 단계별로 알려드려요!</p>
                 </div>
                 
                 <div class="steps-container">
@@ -1346,7 +1119,7 @@
                             <h3>초기 웹페이지 생성</h3>
                         </div>
                         <div class="step-highlight">
-                            <strong>🎯 목표:</strong> 기본적인 체크리스트 웹페이지 생성
+                            <strong>🎯 목표:</strong> Claude에게 내가 원하는 웹페이지 만들어달라고 요청
                         </div>
                         <div class="claude-conversation">
                             <div class="conversation-left">
@@ -1589,12 +1362,12 @@
                         <div class="tip-card">
                             <div class="tip-icon">📝</div>
                             <h4>단계별 접근</h4>
-                            <p>한 번에 모든 기능을 요청하지 않고 단계별로 개선</p>
+                            <p>한 번에 모든 기능을 요청하지 않고<br>단계별로 개선</p>
                         </div>
                         <div class="tip-card">
                             <div class="tip-icon">🎯</div>
                             <h4>구체적인 지시</h4>
-                            <p>"깔끔하게"가 아닌 "카드 형태로, 그라데이션 배경으로"</p>
+                            <p>"깔끔하게"가 아닌 "카드 형태로,<br>그라데이션 배경으로"</p>
                         </div>
                         <div class="tip-card">
                             <div class="tip-icon">🔄</div>
@@ -1646,28 +1419,28 @@
                             <div class="feature-icon">👀</div>
                             <div class="feature-text">
                                 <strong>즉시 미리보기</strong><br>
-                                코드 작성과 동시에 실제 웹페이지 확인 가능
+                                코드 작성과 동시에<br>실제 웹페이지 확인 가능
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">⚡</div>
                             <div class="feature-text">
                                 <strong>실시간 수정</strong><br>
-                                수정 요청하면 기존 코드를 바로 업데이트
+                                수정 요청하면 기존 코드를<br>바로 업데이트
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">📋</div>
                             <div class="feature-text">
                                 <strong>코드 복사</strong><br>
-                                완성된 HTML 파일을 그대로 사용 가능
+                                완성된 HTML 파일을<br>그대로 사용 가능
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">🔄</div>
                             <div class="feature-text">
                                 <strong>반복 개선</strong><br>
-                                여러 번의 수정 요청으로 완벽한 결과물 완성
+                                여러 번의 수정 요청으로<br>완벽한 결과물 완성
                             </div>
                         </div>
                     </div>
@@ -1675,9 +1448,9 @@
                 
                 <div class="final-tip">
                     <div class="final-tip-content">
-                        <h3>🎉 최종 팁</h3>
-                        <p>이 웹페이지도 위의 방법으로 단 5분 만에 만들어졌습니다!<br>
-                        Claude의 아티팩트 기능을 활용하면 누구나 쉽게 인터랙티브한 웹페이지를 만들 수 있어요.</p>
+                        <h3>🎉 사실 Claude가 이거도 다 만들어줬어요</h3>
+                        <p>이 웹페이지도 위의 방법으로 만들었어요 <br>
+                         Claude를 활용해서 여러분도 웹페이지 만들어봐요!</p>
                     </div>
                 </div>
             </div>
@@ -1769,16 +1542,16 @@
                 let messageColor = '';
                 
                 if (yesCount >= 9) {
-                    message = '🎉 AI 활용 전문가! 당신은 프롬프트 마스터입니다. 동료들에게 AI 활용법을 가르쳐주세요!';
+                    message = '🎉 당신은 훌륭한 AI 사용자! AI에 대해 이미 잘알고 계시네요^^ 댓글로 당신의 점수를 자랑해주세요!';
                     messageColor = '#48bb78';
                 } else if (yesCount >= 7) {
-                    message = '👍 AI 활용 중급자! 몇 가지 기술만 더 익히면 전문가가 될 수 있어요.';
+                    message = '👍 당신은 나름AI를 잘 아는 사용자! 조금 더 배워서 고수가 되어 보는건 어떠세요? 댓글로 당신의 점수를 자랑해주세요!';
                     messageColor = '#ed8936';
                 } else if (yesCount >= 4) {
                     message = '📚 AI 활용 초보자! 기본기를 더 익혀서 AI를 효과적으로 활용해보세요.';
                     messageColor = '#667eea';
                 } else {
-                    message = '🌱 AI 활용 입문자! 천천히 하나씩 배워가면서 AI와 친해져보세요.';
+                    message = '🌱 AI 활용 입문자! 천천히 하나씩 배워가면서 AI와 친해져보세요, 화이팅!.';
                     messageColor = '#764ba2';
                 }
                 
